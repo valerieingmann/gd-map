@@ -1,7 +1,4 @@
 {
   "root": true,
-  "extends": ["fullstack", "prettier", "prettier/react"],
-  "rules": {
-    "semi": 0
-  }
+  "extends": ["fullstack", "prettier", "prettier/react"]
 }
