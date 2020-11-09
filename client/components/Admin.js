@@ -63,7 +63,11 @@ class Admin extends React.Component {
     this.setState({ writingToDatabase: false });
   };
 
-  // eslint-disable-next-line complexity
+  testLocation = async () => {
+    let { data } = await axios.get("/api/shows");
+    console.log(data);
+  };
+
   render() {
     const {
       writingToDatabase,
@@ -82,7 +86,6 @@ class Admin extends React.Component {
             <p>{count} shows loaded in current batch</p>
           )}
         {totalCount > 0 && <p>{totalCount} shows completed</p>}
-        {loadingCollection && <p>LOADING COLLECTION</p>}
         {loadingMetadata ? <p>LOADING METADATA</p> : null}
         <div>
           {!loadingCollection &&
@@ -92,6 +95,9 @@ class Admin extends React.Component {
               </button>
             )}
         </div>
+        <button type="button" onClick={this.testLocation}>
+          Test Location
+        </button>
       </div>
     );
   }
