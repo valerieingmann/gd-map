@@ -11,6 +11,12 @@ const Show = db.define("show", {
   },
   location: {
     type: Sequelize.STRING
+  },
+  latitude: {
+    type: Sequelize.FLOAT
+  },
+  longitude: {
+    type: Sequelize.FLOAT
   }
 });
 

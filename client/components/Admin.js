@@ -16,7 +16,7 @@ class Admin extends React.Component {
     };
   }
   getData = async () => {
-    const rows = 100;
+    const rows = 30;
 
     // get all identifiers from archive.org
     this.setState({ loadingCollection: true });
@@ -64,7 +64,7 @@ class Admin extends React.Component {
   };
 
   testLocation = async () => {
-    let { data } = await axios.get("/api/shows");
+    let { data } = await axios.put("/api/shows");
     console.log(data);
   };
 
